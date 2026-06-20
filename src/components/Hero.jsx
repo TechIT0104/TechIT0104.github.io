@@ -48,9 +48,9 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex min-h-screen items-center justify-center px-6 pt-24"
+      className="relative flex min-h-screen flex-col justify-center gap-10 px-6 pb-14 pt-28"
     >
-      <div className="grid w-full max-w-6xl items-center gap-12 md:grid-cols-[1.4fr_1fr]">
+      <div className="mx-auto grid w-full max-w-6xl items-center gap-12 md:grid-cols-[1.4fr_1fr]">
         {/* Left: text */}
         <div>
           <motion.div
@@ -165,12 +165,12 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Stat strip */}
+      {/* Stat strip — kept in normal flow so it can never overlap the CTAs */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.6 }}
-        className="absolute inset-x-0 bottom-8 mx-auto flex max-w-3xl flex-wrap justify-center gap-x-10 gap-y-4 px-6"
+        className="mx-auto flex w-full max-w-3xl flex-wrap justify-center gap-x-10 gap-y-4"
       >
         {stats.map((s) => (
           <div key={s.label} className="text-center">
