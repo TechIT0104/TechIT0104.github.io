@@ -311,7 +311,7 @@ export const stats = [
   { value: '8.64', label: 'CGPA / 10' },
   { value: '1915', label: 'LeetCode Rating' },
   { value: 'Top 1%', label: 'Contest 455' },
-  { value: '10', label: 'Shipped Projects' },
+  { value: '10+', label: 'Shipped Projects' },
 ]
 
 // Oracle certifications. `image` = path to the certificate (save in public/certs/).
