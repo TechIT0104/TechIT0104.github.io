@@ -63,7 +63,7 @@ export default function Hero() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent3 opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-accent3" />
             </span>
-            Open to SDE / ML internships & new grad roles
+            Open to 6-month SDE / ML internships & new grad roles
           </motion.div>
 
           <motion.h1

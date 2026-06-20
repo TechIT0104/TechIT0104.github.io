@@ -239,10 +239,11 @@ export const projects = [
   {
     title: 'Advait',
     subtitle: 'One Nation, One Platform',
-    stack: ['Node.js', 'Express.js', 'EJS', 'JavaScript', 'MVC'],
+    stack: ['Node.js', 'Express.js', 'MongoDB', 'EJS', 'Cheerio'],
     points: [
-      'Full-stack, server-rendered web platform built on an Express.js MVC architecture (controllers, models, routes, EJS views).',
-      // TODO: add 1–2 lines describing what Advait actually does / its impact.
+      'Full-stack "One Nation, One Platform" web app (Node.js, Express, MongoDB, EJS) with KYC-based signup and bcrypt + session authentication.',
+      'Recommendation engine using Axios + Cheerio to scrape services.india.gov.in and match users to government schemes by state, education, and occupation.',
+      "NEKI — a gamified module rewarding users' good deeds with points and a live leaderboard to drive civic engagement.",
     ],
     repo: 'https://github.com/CosmikBlunder/Advait',
     demo: null,
@@ -346,12 +347,12 @@ export const certifications = [
 // Save each file in public/images/gallery/ with the names below.
 // Remove any entry you don't want to show; the section hides itself if empty.
 export const gallery = [
-  { src: asset('images/gallery/g1.jpg'), caption: "Hosting Effervescence'25" },
-  { src: asset('images/gallery/g2.jpg'), caption: 'On stage' },
-  { src: asset('images/gallery/g3.jpg'), caption: 'Anchoring an event' },
-  { src: asset('images/gallery/g4.jpg'), caption: 'On the mic' },
-  { src: asset('images/gallery/g5.jpg'), caption: 'Crowd of thousands' },
-  { src: asset('images/gallery/g6.jpg'), caption: 'Main stage' },
-  { src: asset('images/gallery/g7.jpg'), caption: 'Off the clock' },
-  { src: asset('images/gallery/g8.jpg'), caption: 'Out and about' },
+  { src: asset('images/gallery/g1.jpg'), caption: 'Speaking at Model UN' },
+  { src: asset('images/gallery/g2.jpg'), caption: 'Model UN — in committee' },
+  { src: asset('images/gallery/g3.jpg'), caption: 'On the main stage' },
+  { src: asset('images/gallery/g4.jpg'), caption: "Hosting Effervescence'25" },
+  { src: asset('images/gallery/g5.jpg'), caption: 'Anchoring an event' },
+  { src: asset('images/gallery/g6.jpg'), caption: 'Performing on stage' },
+  { src: asset('images/gallery/g7.jpg'), caption: 'Addressing the audience' },
+  { src: asset('images/gallery/g8.jpg'), caption: 'A crowd of thousands' },
 ]

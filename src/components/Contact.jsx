@@ -23,7 +23,7 @@ export default function Contact() {
         <div className="absolute inset-0 -z-10 bg-gradient-to-tr from-accent/10 via-transparent to-accent2/10" />
 
         <h3 className="mx-auto max-w-2xl text-2xl font-bold leading-snug text-white md:text-3xl">
-          I'm currently open to internships and full-time software / ML roles. Got an idea or a
+          I'm currently open to six-month internships and full-time software / ML roles. Got an idea or a
           role in mind?
         </h3>
 
