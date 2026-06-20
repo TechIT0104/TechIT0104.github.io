@@ -252,20 +252,6 @@ export const projects = [
     accent: 'cyan',
     featured: false,
   },
-  {
-    title: 'Dysarthria Detection',
-    subtitle: 'Automated Severity Classification (research, no public repo)',
-    stack: ['Python', 'PyTorch', 'HuBERT', 'FastAPI', 'Signal Processing'],
-    points: [
-      'AI system for neurological speech-disorder detection using pre-trained HuBERT models.',
-      'Multi-class severity classification pipeline with acoustic feature extraction (MFCCs, spectrograms).',
-      'Speaker-independent model targeting 90%+ accuracy on UA-Speech and TORGO datasets.',
-    ],
-    repo: null, // No public repo for this one.
-    demo: null,
-    accent: 'violet',
-    featured: false,
-  },
 ]
 
 // Achievements grouped by category. Each card renders `group` + a list of `items`.
@@ -325,7 +311,7 @@ export const stats = [
   { value: '8.64', label: 'CGPA / 10' },
   { value: '1915', label: 'LeetCode Rating' },
   { value: 'Top 1%', label: 'Contest 455' },
-  { value: '11', label: 'Shipped Projects' },
+  { value: '10', label: 'Shipped Projects' },
 ]
 
 // Oracle certifications. `image` = path to the certificate (save in public/certs/).
