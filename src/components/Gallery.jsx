@@ -13,7 +13,9 @@ export default function Gallery() {
 
   return (
     <Section id="gallery" eyebrow="07 — Beyond code" title="Leadership & moments">
-      <div className="columns-2 gap-4 sm:columns-3 [&>*]:mb-4">
+      {/* Uniform grid: 2 cols on mobile, 4 on desktop — tiles share one aspect
+          ratio so the wall stays even regardless of each photo's dimensions. */}
+      <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
         {gallery.map((g, i) =>
           broken[i] ? null : (
             <motion.button
@@ -21,18 +23,20 @@ export default function Gallery() {
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-40px' }}
-              transition={{ duration: 0.5, delay: (i % 3) * 0.08 }}
+              transition={{ duration: 0.5, delay: (i % 4) * 0.06 }}
               onClick={() => setActive(g)}
-              className="group relative block w-full overflow-hidden rounded-2xl border border-white/10"
+              className="group relative block aspect-[4/5] w-full overflow-hidden rounded-2xl ring-1 ring-white/10 transition-all duration-300 hover:ring-accent/40"
             >
               <img
                 src={g.src}
                 alt={g.caption}
                 loading="lazy"
                 onError={() => setBroken((b) => ({ ...b, [i]: true }))}
-                className="w-full transition-transform duration-500 group-hover:scale-110"
+                className="h-full w-full object-cover object-center brightness-[0.82] saturate-[0.9] transition-all duration-500 group-hover:scale-105 group-hover:brightness-100 group-hover:saturate-100"
               />
-              <span className="absolute inset-0 flex items-end bg-gradient-to-t from-black/70 to-transparent p-4 text-sm font-medium text-white opacity-0 transition-opacity group-hover:opacity-100">
+              {/* Dark gradient blends the photo edges into the page and seats the caption. */}
+              <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/85 via-black/15 to-black/30" />
+              <span className="absolute inset-x-0 bottom-0 p-3 text-left text-xs font-medium leading-snug text-slate-100 drop-shadow sm:text-sm">
                 {g.caption}
               </span>
             </motion.button>
@@ -60,7 +64,7 @@ export default function Gallery() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
-              className="max-h-[85vh] max-w-3xl overflow-hidden rounded-2xl"
+              className="max-h-[85vh] max-w-3xl overflow-hidden rounded-2xl ring-1 ring-white/10"
             >
               <img src={active.src} alt={active.caption} className="max-h-[80vh] w-auto" />
               <figcaption className="bg-panel p-4 text-center text-sm text-slate-300">

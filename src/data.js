@@ -139,20 +139,6 @@ export const projects = [
     featured: true,
   },
   {
-    title: 'NyayaSetu',
-    subtitle: 'AI-Powered Legal Intelligence Platform',
-    stack: ['Next.js', 'React', 'TypeScript', 'Gemini 2.0 Flash', 'Speech-to-Text'],
-    points: [
-      'Legal-research assistant surfacing the 5 most relevant Supreme Court precedents per query.',
-      'Judgment predictor + NyayKaksh: a real-time English-to-Hindi speech translator with per-sentence AI analysis.',
-      'Integrated Google Gemini 2.0 Flash for case analysis and follow-up Q&A behind a Next.js + TypeScript interface.',
-    ],
-    repo: 'https://github.com/TechIT0104/Masterblasters', // TODO: confirm repo
-    demo: null,
-    accent: 'green',
-    featured: true,
-  },
-  {
     title: 'DynamicKV',
     subtitle: 'Scalable NoSQL Key-Value Store',
     stack: ['C++17', 'Crow', 'Robin-Hood Hashing', 'Bloom Filters', 'REST API'],
@@ -163,8 +149,22 @@ export const projects = [
     ],
     repo: 'https://github.com/CosmikBlunder/DynamicKV',
     demo: null,
+    accent: 'green',
+    featured: true,
+  },
+  {
+    title: 'NyayaSetu',
+    subtitle: 'AI-Powered Legal Intelligence Platform',
+    stack: ['Next.js', 'React', 'TypeScript', 'Gemini 2.0 Flash', 'Speech-to-Text'],
+    points: [
+      'Legal-research assistant surfacing the 5 most relevant Supreme Court precedents per query.',
+      'Judgment predictor + NyayKaksh: a real-time English-to-Hindi speech translator with per-sentence AI analysis.',
+      'Integrated Google Gemini 2.0 Flash for case analysis and follow-up Q&A behind a Next.js + TypeScript interface.',
+    ],
+    repo: 'https://github.com/TechIT0104/Masterblasters', // TODO: confirm repo
+    demo: null,
     accent: 'cyan',
-    featured: false,
+    featured: true,
   },
   {
     title: 'InvestorPulse / FinTeQ',
@@ -191,7 +191,8 @@ export const projects = [
     ],
     repo: 'https://github.com/TechIT0104/MLChallange',
     demo: null,
-    accent: 'green',
+    accent: 'cyan',
+    hackathon: true,
     featured: false,
   },
   {
@@ -205,7 +206,8 @@ export const projects = [
     ],
     repo: 'https://github.com/TechIT0104/GPAI',
     demo: null,
-    accent: 'cyan',
+    accent: 'green',
+    hackathon: true,
     featured: false,
   },
   {
@@ -219,7 +221,7 @@ export const projects = [
     ],
     repo: 'https://github.com/TechIT0104/EmotiSense',
     demo: null,
-    accent: 'violet',
+    accent: 'green',
     featured: false,
   },
   {

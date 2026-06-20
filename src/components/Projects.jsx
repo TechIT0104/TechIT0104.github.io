@@ -104,9 +104,24 @@ function ProjectCard({ p, i }) {
   )
 }
 
+function ProjectGroup({ label, items }) {
+  if (items.length === 0) return null
+  return (
+    <>
+      <h3 className="mb-6 mt-16 font-mono text-sm tracking-widest text-accent">{label}</h3>
+      <div className="grid gap-6 md:grid-cols-2">
+        {items.map((p, i) => (
+          <ProjectCard key={p.title} p={p} i={i} />
+        ))}
+      </div>
+    </>
+  )
+}
+
 export default function Projects() {
   const featured = projects.filter((p) => p.featured)
-  const more = projects.filter((p) => !p.featured)
+  const hackathons = projects.filter((p) => p.hackathon)
+  const more = projects.filter((p) => !p.featured && !p.hackathon)
 
   return (
     <Section id="projects" eyebrow="03 — Things I've built" title="Featured projects">
@@ -116,18 +131,8 @@ export default function Projects() {
         ))}
       </div>
 
-      {more.length > 0 && (
-        <>
-          <h3 className="mb-6 mt-16 font-mono text-sm tracking-widest text-accent">
-            MORE PROJECTS
-          </h3>
-          <div className="grid gap-6 md:grid-cols-2">
-            {more.map((p, i) => (
-              <ProjectCard key={p.title} p={p} i={i} />
-            ))}
-          </div>
-        </>
-      )}
+      <ProjectGroup label="MORE PROJECTS" items={more} />
+      <ProjectGroup label="HACKATHONS" items={hackathons} />
     </Section>
   )
 }
